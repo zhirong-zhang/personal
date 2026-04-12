@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glacier Rush - Zhirong Portfolio</title>
+
+  <link rel="shortcut icon" href="../assets/images/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="project-detail-page">
+    <article>
+
+      <a href="../index.html" class="back-btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div class="project-hero">
+        <img src="../assets/images/GlacierRush.png" alt="Glacier Rush VR game screenshot">
+      </div>
+
+      <h1 class="project-detail-title">Glacier Rush</h1>
+      <p class="project-detail-category">VR Game Demo &mdash; Group Project</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-label">Role</p>
+          <p class="meta-value">Team Member</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Type</p>
+          <p class="meta-value">Group Project</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Platform</p>
+          <p class="meta-value">VR</p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Overview</h2>
+        <div class="project-description">
+          <p>
+            <!-- TODO: Replace with your actual project description -->
+            Glacier Rush is a VR skiing exergame demo developed for the Meta Quest 2, designed to enhance player reaction speed and physical coordination through immersive, motion-based gameplay. The game features an endless snow-track experience where players avoid obstacles, collect items, and survive as long as possible in an increasingly challenging environment.
+          </p>
+          
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Tech Stack</h2>
+        <ul class="tech-stack-list">
+          <li class="tech-tag">Unity</li>
+          <li class="tech-tag">C#</li>
+          <li class="tech-tag">VR (XR Toolkit)</li>
+          <!-- Add more tags as needed -->
+        </ul>
+      </section>
+
+      <section class="project-section" style="display: none;">
+        <h2 class="project-section-title">Screenshots</h2>
+        <div class="project-gallery">
+          <img src="../assets/images/GlacierRush.png" alt="Glacier Rush screenshot 1">
+          <!-- Add more screenshots as needed -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Project Details</h2>
+        <div class="project-writeup">
+
+          <h3>Game Concept & Design Philosophy</h3>
+          <p>
+            Glacier Rush was designed as an endurance-based VR experience rather than a traditional racing game. Instead of reaching a finish line, players aim to survive on an infinite looping track, where difficulty gradually increases through speed and obstacle density. This design emphasizes replayability, player skill progression, and short, high-intensity gameplay sessions.
+          </p>
+
+          <h3>Virtual Environment & Visual Style</h3>
+          <p>
+            The game is set in a snow-covered alpine environment and adopts a low-poly art style to balance visual clarity and performance. The environment dynamically changes with each loop, including obstacle placement and item distribution, ensuring that each run feels unique.
+          </p>
+
+          <h3>Player Interaction & VR Controls</h3>
+          <p>
+            The interaction system was designed to be intuitive and accessible. Players control movement using the Meta Quest 2 controllers, adjusting speed and direction via joystick input while using head movement to control the camera view. This separation of movement and perspective reduces motion sickness while maintaining immersion. Additional interactions, such as attacking enemies and collecting items, are handled through simple collision-based mechanics to preserve gameplay fluidity.
+          </p>
+
+          <h3>Gameplay Mechanics & Systems</h3>
+          <p>
+            The core gameplay loop combines obstacle avoidance, item collection, and enemy interaction. Players can collect coins for scoring and buffs such as temporary speed boosts, while also striking enemy targets for additional points. A leaderboard system encourages replayability by allowing players to compete for higher scores and longer survival times.
+          </p>
+
+          <h3>Technical Implementation</h3>
+          <p>
+            The project was developed in Unity using the XR Interaction Toolkit for VR functionality. Game elements such as obstacles, items, and enemies are generated dynamically using a random spawning system, ensuring variability between playthroughs. Physics-based movement and collision detection were used to create a smooth and responsive skiing experience.
+          </p>
+
+          <h3>Challenges & Design Trade-offs</h3>
+          <p>
+            During development, several planned features—such as more complex interactions and dynamic enemy behaviors—were simplified to ensure performance and feasibility on the Meta Quest 2. This resulted in a more streamlined experience, though with reduced gameplay variety. The project highlights the importance of balancing system complexity with technical constraints in VR development.
+          </p>
+
+          <!-- Full-width image with caption -->
+          <!--
+          <img class="writeup-img" src="../assets/images/glacier-rush-detail-1.png" alt="Description">
+          <p class="writeup-caption">Caption describing what this screenshot shows</p>
+          -->
+
+          <!-- Two images side by side -->
+          <!--
+          <div class="writeup-img-half">
+            <img src="../assets/images/glacier-rush-detail-2.png" alt="Description">
+            <img src="../assets/images/glacier-rush-detail-3.png" alt="Description">
+          </div>
+          -->
+
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Links</h2>
+        <div class="project-links">
+          <a href="https://drive.google.com/file/d/1Gv6f9ubj34JcovtZQEas4UKHHrZCpWug/view?usp=drive_link" class="project-link-btn primary" target="_blank">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>View on Google Drive</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

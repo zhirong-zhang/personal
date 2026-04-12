@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Wick - Zhirong Portfolio</title>
+
+  <link rel="shortcut icon" href="../assets/images/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="project-detail-page">
+    <article>
+
+      <a href="../index.html" class="back-btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div class="project-hero">
+        <img src="../assets/images/MrWick.png" alt="Mr Wick game screenshot">
+      </div>
+
+      <h1 class="project-detail-title">Mr Wick</h1>
+      <p class="project-detail-category">2D Game &mdash; Individual Project</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-label">Role</p>
+          <p class="meta-value">Solo Developer</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Type</p>
+          <p class="meta-value">Individual Project</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Engine</p>
+          <p class="meta-value">Unity</p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Overview</h2>
+        <div class="project-description">
+          <p>
+            <!-- TODO: Replace with your actual project description -->
+            Mr Wick is a 2D action game developed as an individual project. Unity Editor Version: 2022.3.2f1
+          </p>
+          <p>
+            This game follows the basic design logic of "Tank Battle", I designed the game mechanics of enemy tanks and player tanks. I chose the theme of John Wick for the game. (The main artwork is created by deepnight.itch.io)
+          </p>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Tech Stack</h2>
+        <ul class="tech-stack-list">
+          <li class="tech-tag">Unity</li>
+          <li class="tech-tag">C#</li>
+          <!-- Add more tags as needed -->
+        </ul>
+      </section>
+
+      <section class="project-section" style="display: none;">
+        <h2 class="project-section-title">Screenshots</h2>
+        <div class="project-gallery">
+          <img src="../assets/images/MrWick.png" alt="Mr Wick screenshot 1">
+          <!-- Add more screenshots as needed:
+          <img src="../assets/images/mr-wick-2.png" alt="Mr Wick screenshot 2">
+          -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Project Details</h2>
+        <div class="project-writeup">
+
+          <!-- Write your detailed explanation here. Mix paragraphs and images freely. -->
+
+          <h3>Map Generation</h3>
+          <p>
+            The map spans a 23x23 grid. Within this realm, the player will encounter two types of obstacles, each with distinct characteristics. There are 15 destructible obstacles, with 3 health points and 15 indestructible obstacles. All obstacles are generated at random locations. Notably, the outermost layer of the map consists entirely of indestructible obstacles, forming an impenetrable boundary. 
+          </p>
+
+          <h3>Level 1</h3>
+          <p>
+            This is an introductory level designed to help players familiarize themselves with the basic operations and rules of the game. Players will take control of a John Wick and fight against enemies on a simple battlefield. Enemies are few in number and simple in their actions, and the goal is for the player to gradually get into the game by mastering the basic operations of moving, steering and firing. The player's main goal is to defeat all the enemies within the level and move on to the next level after completing the mission. The player has 10 lives and the number of enemies is 10.
+          </p>
+
+          <h3>Level 2</h3>
+          <p>
+            This is the second level of the game and is considerably more difficult compared to the first. The player will face a more complex battlefield with an increased number of obstacles and enemies, as well as a change in enemy types. Players will fight enemies in a more challenging environment, facing stronger enemies and more complex tactical requirements. In this level, Players will have the opportunity to pick up 2 different types of props: Enhanced Firepower Props and Blood Pack.
+          </p>
+
+          <h3>Implemented Game UI</h3>
+          <ul>
+            <li>Start Interface</li>
+            <li>Leaderboard Screen</li>
+            <li>Settings Screen</li>
+            <li>Game Interface (2 Levels)</li>
+            <li>Exit Game Interface</li>
+            <li>Failure Interface</li>
+            <li>Victory Screen</li>
+          </ul>
+          
+          <h3>Core game logic and data management</h3>
+          <ul>
+            <li>Data Management: Sound Settings & Leaderboard Data</li>
+            <li>Reward System: Blood Pack & Boost Atack Power</li>
+            <li>Hero Class and Bullet System</li>
+            <li>Collision Detection</li>
+            <li>Time and Status Management</li>
+          </ul>
+
+          <!-- Full-width image with caption -->
+          <!--
+          <img class="writeup-img" src="../assets/images/mr-wick-detail-1.png" alt="Description">
+          <p class="writeup-caption">Caption describing what this screenshot shows</p>
+          -->
+
+          <!-- Two images side by side -->
+          <!--
+          <div class="writeup-img-half">
+            <img src="../assets/images/mr-wick-detail-2.png" alt="Description">
+            <img src="../assets/images/mr-wick-detail-3.png" alt="Description">
+          </div>
+          <p class="writeup-caption">Caption for the two images above</p>
+          -->
+
+          <!-- Bullet list example -->
+          <!--
+          <ul>
+            <li>Feature or detail one</li>
+            <li>Feature or detail two</li>
+            <li>Feature or detail three</li>
+          </ul>
+          -->
+
+          <!-- Blockquote for highlighting a key takeaway -->
+          <!--
+          <blockquote>
+            A key insight or lesson learned from this project.
+          </blockquote>
+          -->
+
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Links</h2>
+        <div class="project-links">
+          <a href="https://drive.google.com/file/d/1ZKoKzOd4pk1RPUbOEZ7z5ZqR65qR9JXY/view?usp=drive_link" class="project-link-btn primary" target="_blank">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>View on Google Drive</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Chatbot - Zhirong Portfolio</title>
+
+  <link rel="shortcut icon" href="../assets/images/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="project-detail-page">
+    <article>
+
+      <a href="../index.html" class="back-btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div class="project-hero">
+        <img src="../assets/images/Fix Grammar.png" alt="IELTS Chatbot screenshot">
+      </div>
+
+      <h1 class="project-detail-title">IELTS Chatbot</h1>
+      <p class="project-detail-category">Full Stack Development &mdash; Individual Project</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-label">Role</p>
+          <p class="meta-value">Full Stack Developer</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Type</p>
+          <p class="meta-value">Individual Project</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Stack</p>
+          <p class="meta-value">MERN</p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Overview</h2>
+        <div class="project-description">
+          <p>
+            <!-- TODO: Replace with your actual project description -->
+            This project is a full-stack IELTS Writing Task 2 assistant designed to guide practice rather than generate full essays. It combines a React frontend with an Express backend, supports themed UI, timed writing, staged progress to unlock grading, and AI-assisted feedback modes (outline, transitions, synonyms, grammar, natural phrasing).
+          </p>
+          <p>
+            At a high level, the app flow is: pick a prompt → write in timed conditions → trigger targeted feedback → review and revise. The main UI orchestration lives in Main.js, with writing input in LeftColumn.js, chatbot/feedback interactions in RightColumn.js, and server-side prompt handling in server.js.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Tech Stack</h2>
+        <ul class="tech-stack-list">
+          <li class="tech-tag">React</li>
+          <li class="tech-tag">Node.js</li>
+          <li class="tech-tag">Express</li>
+          <li class="tech-tag">MongoDB</li>
+          <li class="tech-tag">JavaScript</li>
+          <li class="tech-tag">HTML</li>
+          <li class="tech-tag">CSS</li>
+          <li class="tech-tag">OpenAI API</li>
+          <!-- Add more tags as needed -->
+        </ul>
+      </section>
+
+      <section class="project-section" style="display: none;">
+        <h2 class="project-section-title">Screenshots</h2>
+        <div class="project-gallery">
+          <img src="../assets/images/Fix Grammar.png" alt="IELTS Chatbot screenshot 1">
+          <!-- Add more screenshots as needed -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Project Details</h2>
+        <div class="project-writeup">
+
+          <h3>Product Goal</h3>
+          <p>
+            I built this as a writing coach for IELTS Task 2 practice: focus on guided improvement (structure, coherence, vocabulary, grammar) instead of one-click essay generation. The constraint and coaching behavior are reinforced in backend prompt routes in server.js.
+          </p>
+
+          <h3>Frontend Experience</h3>
+          <p>
+            The UI is split into two functional columns.<br><br>
+
+<em><b>Left column:</b></em> writing prompt, timer, textarea, and grading gate logic in LeftColumn.js and Timer.js. <br>
+<em><b>Right column:</b></em>: chatbot panel, feedback buttons, streaming assistant responses, and message rendering in RightColumn.js and ChatMessage.js.<br><br>
+Theme switching and app shell are handled in App.js, with styling across App.css and index.css.
+
+          </p>
+
+          <h3>AI Feedback Architecture</h3>
+          <p>
+            The backend exposes focused endpoints (completions, outline builder, transition suggestions, synonym help, grammar fixing, natural rewriting) in server.js.
+A key implementation detail is streaming responses for some routes, so users see the assistant answer progressively rather than waiting for full completion.
+
+          </p>
+
+          <h3>Learning-Centered UX Decisions</h3>
+          <p>
+            Notable decisions that support learning outcomes: <br><br>
+
+Timed writing simulation (40-minute timer) in Timer.js.<br>
+Stage/goal-based progression before grading in LeftColumn.js.<br>
+Diff-style revision highlighting in RightColumn.js.<br>
+Structured feedback controls (outline/transition/synonym/grammar/natural) in RightColumn.js.
+
+          </p>
+
+          <!-- Full-width image with caption -->
+          <!--
+          <img class="writeup-img" src="../assets/images/ielts-chatbot-detail-1.png" alt="Description">
+          <p class="writeup-caption">Caption describing what this screenshot shows</p>
+          -->
+
+          <!-- Two images side by side -->
+          <!--
+          <div class="writeup-img-half">
+            <img src="../assets/images/ielts-chatbot-detail-2.png" alt="Description">
+            <img src="../assets/images/ielts-chatbot-detail-3.png" alt="Description">
+          </div>
+          -->
+
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Links</h2>
+        <div class="project-links">
+          <a href="https://drive.google.com/file/d/1e982-B1p0o6Z__Pst056qfeLoYhmerDd/view?usp=drive_link" class="project-link-btn primary" target="_blank">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>View on Google Drive</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
