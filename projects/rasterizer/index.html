@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasterizer - Zhirong Portfolio</title>
+
+  <link rel="shortcut icon" href="../../assets/images/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/project-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="project-detail-page">
+    <article>
+
+      <a href="../../" class="back-btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div class="project-hero">
+        <img src="../../assets/images/580Rasterizer/08.png" alt="Rasterizer screenshot">
+      </div>
+
+      <h1 class="project-detail-title">Rasterizer</h1>
+      <p class="project-detail-category">Graphics Programming &mdash; Individual Project</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-label">Role</p>
+          <p class="meta-value">Engineer</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Type</p>
+          <p class="meta-value">Individual Project</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Build Tools</p>
+          <p class="meta-value">SCons</p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Overview</h2>
+        <div class="project-description">
+          <p>
+            <!-- TODO: Replace with your actual project description -->
+            A compact software GPU that implements a full CPU-side rendering pipeline: vertex processing, clipping, rasterization, fragment shading, and z-buffering to produce PPM image outputs.
+          </p>
+          
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Tech Stack</h2>
+        <ul class="tech-stack-list">
+          <li class="tech-tag">C++</li>
+          <li class="tech-tag">SCons</li>
+          <!-- Add more tags as needed -->
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">More Screenshots</h2>
+        <div class="project-gallery">
+          <img src="../../assets/images/580Rasterizer/19.png" alt="Rasterizer screenshot 1">
+          <img src="../../assets/images/580Rasterizer/22.png" alt="Rasterizer screenshot 2">
+          <img src="../../assets/images/580Rasterizer/25.png" alt="Rasterizer screenshot 3">
+          <!-- Add more screenshots as needed:
+          <img src="../../assets/images/mr-wick-2.png" alt="Mr Wick screenshot 2">
+          -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Project Details</h2>
+        <div class="project-writeup">
+
+          <!-- Write your detailed explanation here. Mix paragraphs and images freely. -->
+
+          <h3>Pipeline</h3>
+          <p>
+            Vertex shader → clip against view frustum → perspective divide / NDC → rasterize triangles → fragment shader → depth test → write color buffer
+          </p>
+
+          <h3>Primitives</h3>
+          <p>
+            Supports raw triangles, indexed triangles, triangle fans, and strips (handled in the render flow)
+          </p>
+
+          <h3>Clipping</h3>
+          <p>
+            Recursive Sutherland–Hodgman style clipping implemented in clip_triangle to clip against the six clip planes
+          </p>
+
+          <h3>Rasterization</h3>
+          <p>
+            NDC-to-pixel conversion, bounding-box iteration, barycentric coordinates, top-left fill rule, perspective-correct (smooth) and non-perspective interpolation, and depth testing in rasterize_triangle
+          </p>
+
+          <h3>Shading</h3>
+          <p>
+            Flexible shader hooks — user-provided vertex and fragment shaders with uniform/attribute interpolation rules (flat, noperspective, smooth)
+          </p>
+
+          <!-- Full-width image with caption -->
+          <!--
+          <img class="writeup-img" src="../../assets/images/mr-wick-detail-1.png" alt="Description">
+          <p class="writeup-caption">Caption describing what this screenshot shows</p>
+          -->
+
+          <!-- Two images side by side -->
+          <!--
+          <div class="writeup-img-half">
+            <img src="../../assets/images/mr-wick-detail-2.png" alt="Description">
+            <img src="../../assets/images/mr-wick-detail-3.png" alt="Description">
+          </div>
+          <p class="writeup-caption">Caption for the two images above</p>
+          -->
+
+          <!-- Bullet list example -->
+          <!--
+          <ul>
+            <li>Feature or detail one</li>
+            <li>Feature or detail two</li>
+            <li>Feature or detail three</li>
+          </ul>
+          -->
+
+          <!-- Blockquote for highlighting a key takeaway -->
+          <!--
+          <blockquote>
+            A key insight or lesson learned from this project.
+          </blockquote>
+          -->
+
+        </div>
+      </section>
+
+      <section class="project-section" style="display: none;">
+        <h2 class="project-section-title">Links</h2>
+        <div class="project-links">
+          <a href="https://youtu.be/ST23Yve7r2Q" class="project-link-btn primary" target="_blank">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>View on YouTube</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
