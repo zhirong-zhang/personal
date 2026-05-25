@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ray Tracer - Zhirong Portfolio</title>
+
+  <link rel="shortcut icon" href="../../assets/images/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/project-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="project-detail-page">
+    <article>
+
+      <a href="../../" class="back-btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div class="project-hero">
+        <img src="../../assets/images/580Raytracer/29.png" alt="Ray Tracer screenshot">
+      </div>
+
+      <h1 class="project-detail-title">Ray Tracer</h1>
+      <p class="project-detail-category">Graphics Programming &mdash; Individual Project</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-label">Role</p>
+          <p class="meta-value">Engineer</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Type</p>
+          <p class="meta-value">Individual Project</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Build Tools</p>
+          <p class="meta-value">SCons</p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Overview</h2>
+        <div class="project-description">
+          <p>
+            <!-- TODO: Replace with your actual project description -->
+            A custom C++ ray tracer that reads scene descriptions and produces portable PPM renders. The renderer is modular, supports recursive reflections and shadowing, and is tuned for clarity and reproducibility.
+          </p>
+          
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Tech Stack</h2>
+        <ul class="tech-stack-list">
+          <li class="tech-tag">C++</li>
+          <li class="tech-tag">SCons</li>
+          <!-- Add more tags as needed -->
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">More Screenshots</h2>
+        <div class="project-gallery">
+          <img src="../../assets/images/580Raytracer/13.png" alt="Ray Tracer screenshot 1">
+          <img src="../../assets/images/580Raytracer/25.png" alt="Ray Tracer screenshot 2">
+          <img src="../../assets/images/580Raytracer/27.png" alt="Ray Tracer screenshot 3">
+          <img src="../../assets/images/580Raytracer/28.png" alt="Ray Tracer screenshot 4">
+          <!-- Add more screenshots as needed:
+          <img src="../../assets/images/mr-wick-2.png" alt="Mr Wick screenshot 2">
+          -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Project Details</h2>
+        <div class="project-writeup">
+
+          <!-- Write your detailed explanation here. Mix paragraphs and images freely. -->
+
+          <h3>Shaders</h3>
+          <p>
+            Shading is split into modular shader types: a Phong-style shader for diffuse and specular lighting, a reflective shader for mirror-like surfaces, and a flat/debug shader for quick visual checks. Each shader receives the incident ray, surface point, and normal, and returns an RGB contribution while respecting recursion limits for secondary rays.
+          </p>
+
+          <h3>Lighting</h3>
+          <p>
+            The renderer supports point, spot, and directional lights with an ambient term and per-light intensity. Shadowing is implemented by casting shadow rays toward each light, allowing accurate hard shadows and straightforward toggling of shadow computation for performance comparisons.
+          </p>
+
+          <h3>Geometry & Meshes</h3>
+          <p>
+            Supported geometry includes analytic primitives (spheres and planes) plus triangle-based meshes for complex shapes. Each primitive provides robust intersection and normal computations, enabling correct shading and stable results at grazing angles.
+          </p>
+
+          <h3>Ray Casting & Intersections</h3>
+          <p>
+            Primary rays are generated from a configurable camera and traced recursively for reflections. A nearest-hit routine finds the closest valid intersection and returns a hit record used by shaders to evaluate surface lighting and spawn secondary rays when needed.
+          </p>
+
+          <h3>Bounding‑Volume Hierarchy</h3>
+          <p>
+            To limit expensive triangle and primitive tests, the renderer builds a bounding‑box hierarchy that groups object parts and prunes traversal. The hierarchy is built once before rendering and dramatically reduces the number of ray‑object intersection tests on complex scenes.
+          </p>
+
+          <!-- Full-width image with caption -->
+          <!--
+          <img class="writeup-img" src="../../assets/images/mr-wick-detail-1.png" alt="Description">
+          <p class="writeup-caption">Caption describing what this screenshot shows</p>
+          -->
+
+          <!-- Two images side by side -->
+          <!--
+          <div class="writeup-img-half">
+            <img src="../../assets/images/mr-wick-detail-2.png" alt="Description">
+            <img src="../../assets/images/mr-wick-detail-3.png" alt="Description">
+          </div>
+          <p class="writeup-caption">Caption for the two images above</p>
+          -->
+
+          <!-- Bullet list example -->
+          <!--
+          <ul>
+            <li>Feature or detail one</li>
+            <li>Feature or detail two</li>
+            <li>Feature or detail three</li>
+          </ul>
+          -->
+
+          <!-- Blockquote for highlighting a key takeaway -->
+          <!--
+          <blockquote>
+            A key insight or lesson learned from this project.
+          </blockquote>
+          -->
+
+        </div>
+      </section>
+
+      <section class="project-section" style="display: none;">
+        <h2 class="project-section-title">Links</h2>
+        <div class="project-links">
+          <a href="https://youtu.be/ST23Yve7r2Q" class="project-link-btn primary" target="_blank">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>View on YouTube</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
