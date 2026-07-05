@@ -73,6 +73,11 @@ iframe {
   aspect-ratio: 16 / 9;
 }
 
+video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 .project-detail-title {
   color: var(--white-2);
   font-size: 28px;
