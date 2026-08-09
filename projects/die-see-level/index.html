@@ -92,6 +92,15 @@
 
           <h3>Gantt Chart</h3>
           <img class="writeup-img" src="../../assets/images/dieseelevel/GanttChart.png" alt="Die See Level gantt chart">
+
+          <p>
+            <p>One of the biggest challenges of this project was coordinating a <strong>five-person</strong> team across <strong>three time zones </strong> while navigating final exams and graduation schedules. Before the semester ended, we held weekly <strong>in-person</strong> meetings to <strong>build team rapport</strong>, then transitioned to <strong>online collaboration</strong> afterward.</p>
+
+<p>Through this experience, I learned that being in a <strong>leadership</strong> role does not mean simply organizing things my way and expecting others to follow. As a producer, part of my responsibility is making sure the team feels comfortable with our tools and workflow. When coordinating meetings through group chats became difficult, I adapted by using <strong>When2meet</strong> and <strong>Google Calendar invites </strong> to make scheduling more accessible and reliable. Based on feedback from teammates, I also <strong>reorganized</strong> our Discord into separate channels and roles and used email when it better suited individual communication preferences.</p>
+
+<p>Even on a small game jam project, producing taught me the importance of <strong>taking care of the team</strong> behind the game. Being willing to <strong>adapt my processes</strong> to different teammates’ needs helped create a calmer, more comfortable working environment and ultimately supported a smoother development process.</p>
+
+          </p>
             
 
           <h3>Ideation to Implementation</h3>
@@ -99,10 +108,34 @@
               <source src="../../assets/images/dieseelevel/Showcase.mp4" type="video/mp4">
           </video>
 
+          <p>Being part of this project also helped me understand the importance of having a <strong>clear creative direction</strong>. Establishing a shared vision for the game helped us <strong>define the scope</strong> and make more focused design decisions. During our brainstorming sessions, we explored many different ideas before choosing a <strong>level as our main tool</strong>. We felt it fit the game jam theme well while giving us an opportunity to experiment with <strong>unusual gameplay mechanics</strong>.</p>
+
+<p>Our goal was to create gameplay inspired by the <strong>hallway fight scene from <em>Inception</em></strong>, where players physically rotate the level in their hands to change the direction of gravity while continuing to fight enemies. With a clear understanding of the experience we wanted to create, we decided to <strong>focus our scope on the game's technical challenges</strong> rather than attempting to build a fully featured game within a few weeks. Our goal became creating an <strong>impressive technical demo</strong> that demonstrated the core concept, and we were proud of what we accomplished.</p>
+
+<p>In the final build, we successfully implemented:</p>
+
+<ol>
+  <li>A <strong>gyroscope-supported gravity system</strong> that changes the direction of gravity when the player rotates the controller beyond a certain angle.</li>
+  <li><strong>Enemy combat logic and pathfinding</strong> that continue to function after the gravity plane changes.</li>
+  <li>An <strong>Actor Dynamic Gravity Component</strong> that allows objects using the component to change their gravity direction dynamically, just as the player does.</li>
+</ol>
+
+
+          <h3>Documentation</h3>
+          <p>Another important part of my role as a producer was <strong>project documentation and repository management</strong>. I managed the project's GitHub repository and maintained a casual <strong>design journal</strong> to record meeting notes, discussions, and important decisions throughout development.</p>
+
+<p>Alongside these day-to-day records, I also maintained a more structured <strong>Game Design Document (GDD)</strong> that organized information related to game design, art assets, level design, and other aspects of production. Keeping both forms of documentation helped us <strong>preserve important decisions and maintain a shared source of information</strong> that the team could reference throughout development.</p>
+
+
           <!-- Write your detailed explanation here. Mix paragraphs and images freely. -->
 
           <h3>Additional Programming (Egg Hatching)</h3>
           <img class="writeup-img" src="../../assets/images/dieseelevel/hatching.gif" alt="Die See Level hatching feature">
+
+          <p>I also contributed to the <strong>engineering</strong> side of the project, primarily implementing the <strong>egg-hatching system</strong> using a combination of Blueprints and C++. I set up the egg colliders in the Unreal Editor and used Blueprint to handle the <strong>player-egg collision detection</strong>. I also implemented the <strong>game flow from the start screen UI to the opening cinematic and into gameplay</strong>, ensuring a smooth transition between each stage of the player experience.</p>
+
+<p>For the underlying gameplay logic, I used <strong>C++</strong> to handle <strong>enemy spawning and the egg-hatching sequence</strong>, where custom functions allowed us to organize and control the behavior more effectively. Splitting the system between Blueprint and C++ allowed me to use each tool where it was most effective while keeping the implementation manageable.</p>
+
 
           <!-- Full-width image with caption -->
           <!--
