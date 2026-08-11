@@ -171,11 +171,11 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link>About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
 
@@ -191,7 +191,7 @@
         - #ABOUT
       -->
 
-      <article class="about  " data-page="about">
+      <article class="about active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -214,7 +214,7 @@
             I also have some experience in <strong>full-stack web development</strong>, such as developing chatbot applications. 
           </p>
 
-          <p><strong>Secret talent:</strong> I have an offical WCA (World Cube Association) record of solving a <strong>3x3 Rubik's Cube in 12 seconds</strong>. I also dabble in magic and have even <strong>fooled a few magicians</strong> at Magic Castle Hollywood.</p>
+          <p><strong>Secret talent:</strong> I have an offical WCA (World Cube Association) personal record of solving a <strong>3x3 Rubik's Cube in 12 seconds</strong>. I also dabble in magic and have even <strong>fooled a few magicians</strong> at Magic Castle Hollywood.</p>
         </section>
 
 
@@ -231,23 +231,6 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/playstation-svgrepo-com (2).svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Game Engine Development</h4>
-
-                <p class="service-item-text">
-                  Customized culling, physics, and animation systems in C++
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
                 <img src="./assets/images/game-9-svgrepo-com (2).svg" alt="AGP icon" width="40">
               </div>
 
@@ -256,6 +239,24 @@
 
                 <p class="service-item-text">
                   Technical Producer
+                </p>
+              </div>
+
+            </li>
+
+            
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/unreal-engine-svgrepo-com.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Untitled Game</h4>
+
+                <p class="service-item-text">
+                  Built with Unreal Engine
                 </p>
               </div>
 
@@ -280,14 +281,15 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/unreal-engine-svgrepo-com.svg" alt="camera icon" width="40">
+                <img src="./assets/images/playstation-svgrepo-com (2).svg
+                " alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Untitled Game</h4>
+                <h4 class="h4 service-item-title">Game Engine Development</h4>
 
                 <p class="service-item-text">
-                  Built with Unreal Engine
+                  Customized culling, physics, and animation systems in C++
                 </p>
               </div>
 
@@ -298,8 +300,72 @@
         </section>
 
 
+        <section class="highlight">
+          <!-- highlight project on about me page -->
+          <h3 class="h3 service-title">Highlight Projects</h3>
+          <ul class = "project-list">
+          <li class="project-item  active" data-filter-item data-category="production">
+              <a href="projects/die-see-level/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/dieseelevel/thumbnail.png" alt="Die See Level" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Die See Level (Group Project)</h3>
+
+                <p class="project-category">Project Management & Gameplay Programming</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="game programming">
+              <a href="projects/prime-engine/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/milestone2.png" alt="Prime Engine" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">C++ Prime Engine (Individual)</h3>
+
+                <p class="project-category">Game Engine Development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="game programming">
+              <a href="projects/mr-wick/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/MrWick.png" alt="Mr Wick" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mr Wick (Individual)</h3>
+
+                <p class="project-category">2D Game</p>
+
+              </a>
+            </li>
 
 
+          </ul>
+        </section>
+
+
+          <div class="service-actions">
+            <button type="button" class="portfolio-cta-btn" style="width: 100%" data-portfolio-btn>View Full Portfolio</button>
+          </div>
 
       </article>
 
@@ -490,7 +556,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio active" data-page="portfolio">
+      <article class="portfolio" data-page="portfolio" id="portfolio-section">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -511,13 +577,13 @@
             <li class="filter-item">
               <button data-filter-btn>Game Design</button>
             </li>
-            
+
             <li class="filter-item">
-              <button data-filter-btn>Web Design</button>
+              <button data-filter-btn>Production</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
+              <button data-filter-btn>Web Design/Development</button>
             </li>
 
             <li class="filter-item">
@@ -553,11 +619,11 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web Design</button>
+                <button data-select-item>Production</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web Development</button>
+                <button data-select-item>Web Design/Development</button>
               </li>
 
               <li class="select-item">
@@ -570,7 +636,7 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="game programming">
+            <li class="project-item  active" data-filter-item data-category="production">
               <a href="projects/die-see-level/">
 
                 <figure class="project-img">
@@ -752,7 +818,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web design/development">
               <a href="projects/ielts-chatbot/">
 
                 <figure class="project-img">
@@ -771,7 +837,8 @@
             </li>
 
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+
+            <li class="project-item  active" data-filter-item data-category="web design/development">
               <a href="payment.html">
 
                 <figure class="project-img">
@@ -791,7 +858,7 @@
 
             
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="web design/development">
               <a href="subscription.html">
 
                 <figure class="project-img">

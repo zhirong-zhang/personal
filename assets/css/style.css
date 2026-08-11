@@ -520,6 +520,30 @@ strong {
 
 .service-title { margin-bottom: 20px; }
 
+.service-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--orange-yellow-crayola);
+  color: var(--bg-gradient-jet);
+  font-weight: var(--fw-500);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
 .service-list {
   display: grid;
   grid-template-columns: 1fr;

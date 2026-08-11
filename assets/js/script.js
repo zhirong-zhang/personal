@@ -73,18 +73,38 @@ formInputs.forEach((input) => {
 // Page navigation
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+const portfolioButton = document.querySelector("[data-portfolio-btn]");
 
-navigationLinks.forEach((navLink, index) => {
+const activatePage = (pageName, scrollTarget = null) => {
+  pages.forEach((page) => {
+    const isActivePage = page.dataset.page === pageName;
+    page.classList.toggle("active", isActivePage);
+  });
+
+  navigationLinks.forEach((link) => {
+    const isActiveLink = link.textContent.trim().toLowerCase() === pageName;
+    link.classList.toggle("active", isActiveLink);
+  });
+
+  if (scrollTarget) {
+    const target = document.querySelector(scrollTarget);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+};
+
+navigationLinks.forEach((navLink) => {
   navLink.addEventListener("click", function () {
-    pages.forEach((page, pageIndex) => {
-      if (this.innerHTML.toLowerCase() === page.dataset.page) {
-        page.classList.add("active");
-        navigationLinks[pageIndex].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        page.classList.remove("active");
-        navigationLinks[pageIndex].classList.remove("active");
-      }
-    });
+    const pageName = this.textContent.trim().toLowerCase();
+    activatePage(pageName);
   });
 });
+
+if (portfolioButton) {
+  portfolioButton.addEventListener("click", () => {
+    activatePage("portfolio", "#portfolio-section");
+  });
+}
