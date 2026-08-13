@@ -53,7 +53,7 @@
         <div class="project-description">
           <p>
             <!-- TODO: Replace with your actual project description -->
-            Rogue Game Demo is a Java-based rogue-style dungeon game demo that explores object-oriented design and algorithm-driven gameplay. The game simulates an intelligent chase scenario where a monster pursues a rogue using pathfinding while the rogue attempts to survive by making strategic movmenet decisions based on the dungeon layout.
+            Rogue Game Demo is a <strong>Java-based</strong> rogue-style dungeon game demo that explores <strong>object-oriented design</strong> and <strong>algorithm-driven gameplay</strong>. The game simulates an intelligent chase scenario where a <strong>monster</strong> pursues a rogue using <strong>pathfinding</strong> while the <strong>rogue</strong> attempts to survive by <strong>making strategic movmenet decisions</strong> based on the dungeon layout.
           </p>
           
         </div>
@@ -83,37 +83,37 @@
 
           <h3>System Architecture & Design</h3>
           <p>
-            The project is built on a strong object-oriented foundation. I designed the dungeon as an extension of a weighted graph structure, where rooms and corridors act as vertices and their connections as edges. This abstraction allows core graph algorithms to be resued efficiently while keeping the system modular and scalable.
+            The project is built on a strong <strong>object-oriented</strong> foundation. I designed the dungeon as an extension of a <strong>weighted graph structure</strong>, where rooms and corridors act as <strong>vertices</strong> and their connections as <strong>edges</strong>. This abstraction allows core graph algorithms to be resued efficiently while keeping the system <strong>modular</strong> and <strong>scalable</strong>.
           </p>
           
           <h3>Graph-Based Dungeon Representation</h3>
           <p>
-            By modeling the dungeon as a graph, I enabled advanced operations such as shortest path calculation and cycle detection. This design plays a central role in driving both the monster's pursuit behavior and the rogue's survival strategy.
+            By modeling the dungeon as a graph, I enabled advanced operations such as <strong>shortest path calculation</strong> and <strong>cycle detection</strong>. This design plays a central role in driving both the <strong>monster's pursuit behavior</strong> and the <strong>rogue's survival strategy</strong>.
           </p>
 
           <h3>Graphical User Interface</h3>
           <p>
-            To improve usability and visualization, I implemented a graphical interface using Java Swing and AWT. The GUI renders the dungeon with textured tiles and updates dynamically as the game progresses, allowing users to clearly observe character movement and interactions.
+            To improve <strong>usability</strong> and <strong>visualization</strong>, I implemented a graphical interface using <strong>Java Swing and AWT</strong>. The <strong>GUI</strong> renders the dungeon with <strong>textured tiles</strong> and updates dynamically as the game progresses, allowing users to <strong>clearly observe character movement</strong> and interactions.
           </p>
 
           <h3>Monster Pathfinding AI</h3>
           <p>
-            The monster's behavior is driven by Dijkstra's algorithm, which ensures it always follows the shortest path toward the rogue. I selected this approach after comparing alternatives such as BFS and A*, prioritizing accuracy and consistency in a weighted graph environment.
+            The monster's behavior is driven by <strong>Dijkstra's algorithm</strong>, which ensures it always follows the <strong>shortest path</strong> toward the rogue. I selected this approach after comparing <strong>alternatives</strong> such as BFS and A*, prioritizing <strong>accuracy</strong> and <strong>consistency</strong> in a weighted graph environment.
           </p>
 
           <h3>Rogue cycle-finding AI</h3>
           <p>
-            The rogue follows a more sophisticated strategy focused on survival rather than direct movement. It analyzes the dungeon to detect cycles and determnie safe zones. Depending on the situation, the rogue may navigate toward a cycle, remain within it to avoid capture, or maximize survival time when escape is not possible. These behaviors adapt dynamically to different dungeon maps. The algorithm used to find the cycle is a modified version of Dijkstra's algorithm, where the edge between the start and end point is cut off (weighted 0).
+            The rogue follows a more sophisticated strategy focused on survival rather than direct movement. It analyzes the dungeon to <strong>detect cycles</strong> and <strong>determine safe zones</strong>. Depending on the situation, the rogue may navigate toward a cycle, <strong>remain within it to avoid capture</strong>, or <strong>maximize survival time</strong> when escape is not possible. These behaviors <strong>adapt</strong> dynamically to <strong>different dungeon maps</strong>. The algorithm used to find the cycle is a <strong>modified</strong> version of Dijkstra's algorithm, where <strong>the edge between the start and end point is cut off</strong> (weighted 0).
           </p>
 
           <h3>Algorithm Optimization & Performance</h3>
           <p>
-            I optimized performance by reducing redundant computations and leveraging efficient data structures such as priority queues. The project also includes a detailed time complexity analysis, evaluating different algorithmic approaches and justifying the final design choices.
+            I optimized performance by reducing redundant computations and leveraging <strong>efficient data structures</strong> such as <strong>priority queues</strong>. The project also includes a detailed <strong>time complexity analysis</strong>, evaluating different algorithmic approaches and justifying the final design choices.
           </p>
           
           <h3>Gameplay Logic & Simulation</h3>
           <p>
-            The game operates as a turn-based simulation where the monster and rogue act sequentially. The system handles movement, win/lose conditions, and interaction logic, providing clear feedback through the interface when the game ends.
+            The game operates as a <strong>turn-based</strong> simulation where the monster and rogue act sequentially. The system handles <strong>movement</strong>, <strong>win/lose conditions</strong>, and <strong>interaction logic</strong>, providing clear feedback through the interface when the game ends.
           </p>
 
           <!-- Full-width image with caption -->

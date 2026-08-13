@@ -78,11 +78,23 @@ video {
   aspect-ratio: 16 / 9;
 }
 
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
 .project-detail-title {
   color: var(--white-2);
   font-size: 28px;
   font-weight: var(--fw-600);
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+.project-header .project-link-btn {
+  flex-shrink: 0;
 }
 
 .project-detail-category {
@@ -372,6 +384,18 @@ video {
 
   .project-detail-title {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .project-header .project-link-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
