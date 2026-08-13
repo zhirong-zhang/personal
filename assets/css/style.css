@@ -497,6 +497,7 @@ main {
 
 strong {
   font-weight: 950; /* Extra bold */
+  font-size:106%;
 }
 
 .about .article-title { margin-bottom: 15px; }
