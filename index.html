@@ -23,6 +23,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!--
+    - theme (display mode) switch
+    - loaded here so the saved theme applies before the first paint
+  -->
+  <script src="./assets/js/theme.js"></script>
+
+  <!--
+    - Pre-selects the remembered tab with a temporary stylesheet before the
+    - body is parsed, so returning from a project page never flashes About
+    - first. assets/js/script.js does the real class swap and drops this again
+    - as soon as the visitor navigates themselves.
+  -->
+  <script>
+    (() => {
+      try {
+        const page = sessionStorage.getItem("activePage");
+
+        // "about" is already the markup default, so it needs no help. The
+        // pattern guard keeps a tampered value out of the stylesheet.
+        if (!page || page === "about" || !/^[a-z-]+$/.test(page)) return;
+
+        const style = document.createElement("style");
+        style.id = "page-restore";
+        // Both the article and the navbar highlight ship with `active` in the
+        // markup, so both have to be corrected here or the wrong one paints.
+        style.textContent =
+          "article.active{display:none}" +
+          'article[data-page="' + page + '"]{display:block;animation:none}' +
+          ".navbar-link.active{color:var(--light-gray)}" +
+          '.navbar-link[data-nav-target="' + page + '"]{color:var(--orange-yellow-crayola)}';
+        document.head.appendChild(style);
+      } catch (err) {
+        /* storage blocked - fall through to the markup default */
+      }
+    })();
+  </script>
 </head>
 
 <body>
@@ -171,11 +208,11 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link data-nav-target="about">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link data-nav-target="portfolio">Portfolio</button>
           </li>
 
 

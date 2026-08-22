@@ -69,6 +69,19 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  /* themed surfaces & accents (overridden by [data-theme="light"]) */
+
+  --on-accent: hsl(0, 0%, 7%);
+  --navbar-bg: hsla(240, 1%, 17%, 0.75);
+  --surface-hover: hsl(240, 2%, 20%);
+  --overlay-bg: hsl(0, 0%, 5%);
+  --quote-bg: hsla(240, 2%, 13%, 0.5);
+  --scrollbar-thumb: hsla(0, 0%, 100%, 0.1);
+  --scrollbar-thumb-hover: hsla(0, 0%, 100%, 0.15);
+  --scrollbar-thumb-shadow: hsla(0, 0%, 100%, 0.11);
+  --mono-icon-invert: 0;
+  --map-invert: 1;
+
   /**
    * typography
    */
@@ -93,6 +106,13 @@
   --fw-600: 600;
 
   /**
+   * Weight for running body copy. Light text on a dark card reads optically
+   * heavier, so this drops to Light (300) in dark mode and steps up to
+   * Regular (400) in light mode.
+   */
+  --fw-body: var(--fw-300);
+
+  /**
    * shadow
    */
   
@@ -108,6 +128,100 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+
+}
+
+
+
+
+/*-----------------------------------*\
+  #LIGHT THEME
+\*-----------------------------------*/
+
+/**
+ * White + blue counterpart to the default black + yellow theme.
+ * Applied by assets/js/theme.js via <html data-theme="light">.
+ */
+
+:root[data-theme="light"] {
+
+  /* gradient */
+
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(214, 45%, 99%) 3%,
+    hsl(214, 32%, 93%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right,
+    hsla(214, 50%, 88%, 0.4) 0%,
+    hsla(214, 50%, 96%, 0) 100%
+  ), hsl(0, 0%, 100%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(214, 90%, 60%) 0%,
+    hsla(214, 90%, 60%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg,
+    hsla(214, 90%, 55%, 0.16) 0%,
+    hsla(214, 90%, 55%, 0) 59.86%
+  ), hsl(0, 0%, 100%);
+
+  /**
+   * In dark mode this is a gradient that fades out halfway, so the 1px ring
+   * on cards and buttons reads as a highlight catching the light. On white
+   * that just looks like a border someone forgot to finish, so light mode
+   * uses a flat colour and the ring closes all the way round.
+   */
+  --border-gradient-onyx: hsl(214, 25%, 82%);
+
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(214, 90%, 45%),
+    hsl(224, 84%, 54%)
+  );
+
+  /* solid */
+
+  --jet: hsl(214, 24%, 88%);
+  --onyx: hsl(214, 32%, 94%);
+  --eerie-black-1: hsl(0, 0%, 100%);
+  --eerie-black-2: hsl(0, 0%, 100%);
+  --smoky-black: hsl(214, 38%, 96%);
+  --white-1: hsl(220, 26%, 10%);
+  --white-2: hsl(220, 22%, 15%);
+  --orange-yellow-crayola: hsl(214, 90%, 45%);
+  --vegas-gold: hsl(220, 80%, 36%);
+  --light-gray: hsl(220, 12%, 32%);
+  --light-gray-70: hsla(220, 14%, 30%, 0.72);
+  --bittersweet-shimmer: hsl(0, 65%, 47%);
+
+  /* themed surfaces & accents */
+
+  --on-accent: hsl(0, 0%, 100%);
+  --navbar-bg: hsla(0, 0%, 100%, 0.8);
+  --surface-hover: hsl(214, 42%, 95%);
+  --overlay-bg: hsl(220, 28%, 22%);
+  --quote-bg: hsla(214, 45%, 92%, 0.6);
+  --scrollbar-thumb: hsla(220, 22%, 40%, 0.25);
+  --scrollbar-thumb-hover: hsla(220, 22%, 40%, 0.4);
+  --scrollbar-thumb-shadow: hsla(0, 0%, 100%, 0.5);
+  --mono-icon-invert: 1;
+  --map-invert: 0;
+
+  /* body copy steps up a weight on white — see the note in :root */
+  --fw-body: var(--fw-400);
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: -4px 8px 24px hsla(220, 40%, 30%, 0.1);
+  --shadow-2: 0 16px 30px hsla(220, 40%, 30%, 0.1);
+  --shadow-3: 0 16px 40px hsla(220, 40%, 30%, 0.1);
+  --shadow-4: 0 25px 50px hsla(220, 40%, 30%, 0.08);
+  --shadow-5: 0 24px 80px hsla(220, 40%, 30%, 0.12);
 
 }
 
@@ -148,7 +262,7 @@ input, textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: var(--on-accent);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
@@ -348,7 +462,7 @@ main {
   color: var(--white-1);
   background: var(--onyx);
   font-size: var(--fs-8);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
@@ -459,7 +573,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -505,7 +619,7 @@ strong {
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.6;
 }
 
@@ -534,7 +648,7 @@ strong {
   padding: 10px 20px;
   border-radius: 8px;
   background: var(--orange-yellow-crayola);
-  color: var(--bg-gradient-jet);
+  color: var(--on-accent);
   font-weight: var(--fw-500);
   text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -580,7 +694,7 @@ strong {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-body);
   line-height: 1.6;
 }
 
@@ -627,7 +741,7 @@ strong {
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.6;
   display: -webkit-box;
   line-clamp: 4;
@@ -670,7 +784,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: hsl(0, 0%, 5%);
+  background: var(--overlay-bg);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -739,14 +853,14 @@ strong {
 .modal-content time {
   font-size: var(--fs-6);
   color: var(--light-gray-70);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   margin-bottom: 10px;
 }
 
 .modal-content p {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.6;
 }
 
@@ -854,7 +968,7 @@ strong {
 
 .timeline-text {
   color: var(--light-gray);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.6;
 }
 
@@ -880,7 +994,7 @@ strong {
 .skill .title-wrapper data {
   color: var(--light-gray);
   font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
 }
 
 .skill-progress-bg {
@@ -922,7 +1036,7 @@ strong {
   border: 1px solid var(--jet);
   border-radius: 14px;
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
 }
 
 .filter-select.active .select-icon { transform: rotate(0.5turn); }
@@ -952,14 +1066,14 @@ strong {
   background: var(--eerie-black-2);
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   text-transform: capitalize;
   width: 100%;
   padding: 8px 10px;
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { --eerie-black-2: var(--surface-hover); }
 
 .project-list {
   display: grid;
@@ -1052,7 +1166,7 @@ strong {
 .project-category {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
 }
 
 
@@ -1118,7 +1232,7 @@ strong {
 .blog-meta :is(.blog-category, time) {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
 }
 
 .blog-meta .dot {
@@ -1139,7 +1253,7 @@ strong {
 .blog-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.6;
 }
 
@@ -1167,7 +1281,7 @@ strong {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(var(--map-invert));
 }
 
 .contact-form { margin-bottom: 10px; }
@@ -1805,13 +1919,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--smoky-black);
-    background: hsla(0, 0%, 100%, 0.1);
+    background: var(--scrollbar-thumb);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-                inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    box-shadow: inset 1px 1px 0 var(--scrollbar-thumb-shadow),
+                inset -1px -1px 0 var(--scrollbar-thumb-shadow);
   }
 
-  body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
+  body::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
   body::-webkit-scrollbar-button { height: 60px; }
 
@@ -1890,7 +2004,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .contact-info :is(.contact-link, time, address) {
     --fs-7: 14px;
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-body);
   }
 
   .separator:last-of-type {
@@ -1907,5 +2021,91 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+
+}
+
+
+
+/*-----------------------------------*\
+  #THEME TOGGLE
+\*-----------------------------------*/
+
+/**
+ * Smooth the swap between the dark and light palettes. The explicit
+ * property list on .sidebar keeps its existing max-height animation.
+ */
+
+body,
+article,
+.navbar,
+.filter-select {
+  transition: background-color var(--transition-1),
+              border-color var(--transition-1),
+              color var(--transition-1);
+}
+
+.sidebar {
+  transition: max-height var(--transition-2),
+              background-color var(--transition-1),
+              border-color var(--transition-1);
+}
+
+/* white-on-transparent logos need flipping on light backgrounds */
+.service-icon-box img { filter: invert(var(--mono-icon-invert)); }
+
+.theme-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 75px;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: 20px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+}
+
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible { background: var(--bg-gradient-yellow-1); }
+
+.theme-toggle:hover::before,
+.theme-toggle:focus-visible::before { background: var(--bg-gradient-yellow-2); }
+
+.theme-toggle:hover { transform: scale(1.08); }
+
+.theme-toggle ion-icon { --ionicon-stroke-width: 40px; }
+
+/* show the icon for the theme the button switches *to* */
+.theme-toggle-icon { display: none; }
+
+:root:not([data-theme="light"]) .theme-toggle-icon--to-light { display: block; }
+
+:root[data-theme="light"] .theme-toggle-icon--to-dark { display: block; }
+
+@media (min-width: 1250px) {
+
+  .theme-toggle {
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
 
 }

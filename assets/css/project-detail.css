@@ -173,7 +173,7 @@ video {
 .project-description {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.8;
 }
 
@@ -245,7 +245,7 @@ video {
 
 .project-link-btn.primary {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: var(--on-accent);
 }
 
 .project-link-btn.primary:hover {
@@ -278,7 +278,7 @@ video {
 .project-writeup {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-body);
   line-height: 1.8;
 }
 
@@ -358,7 +358,7 @@ video {
   border-left: 3px solid var(--orange-yellow-crayola);
   padding: 10px 20px;
   margin: 20px 0;
-  background: hsla(240, 2%, 13%, 0.5);
+  background: var(--quote-bg);
   border-radius: 0 10px 10px 0;
   color: var(--white-2);
   font-style: italic;
