@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UE5 Combat System - Zhirong Portfolio</title>
+
+  <link rel="shortcut icon" href="../../assets/images/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/project-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!--
+    - theme (display mode) switch
+    - loaded here so the saved theme applies before the first paint
+  -->
+  <script src="../../assets/js/theme.js"></script>
+</head>
+
+<body>
+
+  <div class="project-detail-page">
+    <article>
+
+      <a href="../../" class="back-btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back to Portfolio</span>
+      </a>
+
+      <div class="project-hero">
+        <img src="../../assets/images/UECombatSystem/CombatSystem.png" alt="Combat System Thumbnail">
+      </div>
+
+      <h1 class="project-detail-title">UE5 Combat System</h1>
+      <p class="project-detail-category">Game Development &mdash; Individual Project</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-label">Role</p>
+          <p class="meta-value">Programmer</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Type</p>
+          <p class="meta-value">Individual Project</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Engine</p>
+          <p class="meta-value">Unreal Engine 5.7.4</p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Overview</h2>
+        <div class="project-description">
+          <p>
+            This project follows a tutorial on building a <strong>combat system</strong> in Unreal Engine 5. My approach was to <strong>recreate the system</strong> little by little based on my understanding of the tutorial, rather than following the video verbatim.
+          </p>
+          <p>
+            The <strong>main features</strong> I implemented include: <br>
+            1. An attack system (<strong>chain attacks</strong>, <strong>jump attacks</strong>, and <strong>attacks while running</strong>) <br>
+            2. A basic hit system (<strong>regular/advanced hitboxes</strong>, <strong>directional hits</strong>, <strong>health bars</strong>, and <strong>ragdoll on death</strong>) <br>
+            3. <strong>Additional features</strong> to improve the overall feel of the combat system, such as <strong>hit stop</strong>, <strong>hit shake</strong>, <strong>camera shake</strong>, <strong>hit flash</strong>, <strong>hit VFX</strong>, and optimized VFX using a <strong>stencil render pass</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Tech Stack</h2>
+        <ul class="tech-stack-list">
+          <li class="tech-tag">Blueprints</li>
+          <li class="tech-tag">Unreal Engine</li>
+          <li class="tech-tag">Niagara System</li>
+          <!-- Add more tags as needed -->
+        </ul>
+      </section>
+
+      <section class="project-section" style="display: none;">
+        <h2 class="project-section-title">Screenshots</h2>
+        <div class="project-gallery">
+          <img src="../../assets/images/milestone2.png" alt="Die See Level screenshot">
+          <!-- Add more screenshots as needed:
+          <img src="../../assets/images/mr-wick-2.png" alt="Mr Wick screenshot 2">
+          -->
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Project Details</h2>
+        <div class="project-writeup">
+
+          <p>
+            I will keep <strong>updating the implementation details</strong> of the project <strong>in the future</strong>. Below are some of the <strong>GIFs</strong> of the features I implemented. I will break them down into <strong>Part 1</strong> and <strong>Part 2</strong>.
+          </p>
+            
+
+          <h3>Part 1:</h3>
+          <p style="font-size: larger;"><strong>Chain Attacks</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/ChainAttacks.webp" alt="Chain Attacks">
+
+          <p style="font-size: larger;"><strong>Attack While Running</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/AttackRunning.webp" alt="Attack While Running">
+
+          <p style="font-size: larger;"><strong>Jump Attack</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/JumpAttack.webp" alt="Jump Attack">
+
+          <p style="font-size: larger;"><strong>Advanced Hitbox</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/AdvancedHitbox.webp" alt="Advanced Hitbox">
+
+          <p style="font-size: larger;"><strong>Health Bar and Directional Hit</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/HealthBarDirectionalHit.webp" alt="Health Bar and Directional Hit">
+
+          <h3>Part 2:</h3>
+
+          <p style="font-size: larger;"><strong>Hit Stop</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/HitStop.webp" alt="Hit Stop">
+
+          <p style="font-size: larger;"><strong>Hit Shake</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/HitShake.webp" alt="Hit Shake">
+
+          <p style="font-size: larger;"><strong>Camera Shake + Hit Flash</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/CameraShakeHitFlash.webp" alt="Camera Shake and Hit Flash">
+
+          <p style="font-size: larger;"><strong>Hit Blood VFX</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/HitVFX.webp" alt="Hit VFX">
+
+          <p style="font-size: larger;"><strong>Optimized VFX with Stencil Render Pass</strong></p>
+          <img class="writeup-img" src="../../assets/images/UECombatSystem/StencilPassVFX.webp" alt="Optimized VFX with Stencil Render Pass">
+
+          <!-- Full-width image with caption -->
+          <!--
+          <img class="writeup-img" src="../../assets/images/mr-wick-detail-1.png" alt="Description">
+          <p class="writeup-caption">Caption describing what this screenshot shows</p>
+          -->
+
+          <!-- Two images side by side -->
+          <!--
+          <div class="writeup-img-half">
+            <img src="../../assets/images/mr-wick-detail-2.png" alt="Description">
+            <img src="../../assets/images/mr-wick-detail-3.png" alt="Description">
+          </div>
+          <p class="writeup-caption">Caption for the two images above</p>
+          -->
+
+          <!-- Bullet list example -->
+          <!--
+          <ul>
+            <li>Feature or detail one</li>
+            <li>Feature or detail two</li>
+            <li>Feature or detail three</li>
+          </ul>
+          -->
+
+          <!-- Blockquote for highlighting a key takeaway -->
+          <!--
+          <blockquote>
+            A key insight or lesson learned from this project.
+          </blockquote>
+          -->
+
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2 class="project-section-title">Links</h2>
+        <div class="project-links">
+          <a href="https://www.youtube.com/watch?v=4omEu9N9WIE" class="project-link-btn primary" target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon>
+            <span>Original Tutorial</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
